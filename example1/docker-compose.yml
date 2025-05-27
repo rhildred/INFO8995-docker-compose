@@ -1,0 +1,12 @@
+services:
+  app:
+    image: app-image:latest
+    volumes:
+      - app_data:/data
+volumes:
+  app_data:
+
+# "external" specifies that this volume already exists on the platform
+# and its lifecycle is managed outside of that of the application
+  demo_volume:
+    external: true
