@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    deploy:
+      mode: replicated-job
+      replicas: 3
+    ports:
+      - "3000-3005:5000"
+  redis:
+    image: "redis:alpine"
